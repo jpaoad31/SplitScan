@@ -6,20 +6,18 @@ addEventListener("load", (event) => {
 function handleFiles() {
     // need to reload page to use a new picture
     const input = document.getElementById("input")
-    const body = document.getElementById("body")
     input.style = "display: none"
-    const reloadText = document.createElement('p')
-    reloadText.innerText = "reload page to process a new image"
-    body.insertBefore(reloadText, input)
 
     const fileList = this.files;
     var file = fileList[0]
-    showFileDetails(file)
 
     if (!file.type.startsWith("image")) {
-        document.getElementById("preview-status").innerText = "cannot display: non-image data"
+        document.getElementById("preview-status").innerText = "cannot display: not an image"
         return
     }
+    
+    document.getElementById("reload-button").style = ""
+
     var img = document.getElementById("image-preview")
     const reader = new FileReader();
     reader.onload = (event) => {
@@ -35,12 +33,6 @@ function setImage(souce) {
     img.src = EventSource
 }
 
-function showFileDetails(file) {
-    document.getElementById("file-name").innerText = file.name
-    document.getElementById("file-type").innerText = file.type
-    document.getElementById("file-size").innerText = file.size
-}
-
 function drawToCanvas(file) {
 
     document.getElementById("preview-status").innerText = "displaying original image"
@@ -51,7 +43,6 @@ function drawToCanvas(file) {
     const height = Math.floor(img.naturalHeight / 2)
 
     if ((width <= 1) || (height <= 1)) {
-
         console.log("small image or image input error")
         return
     }
@@ -98,6 +89,9 @@ function drawToCanvas(file) {
 }
 
 function setDownload(button, canvas, file, nameAppend) {
+
+    button.style = ""
+
     button.addEventListener('click', event => {
         const canvasLink = canvas.toDataURL(file.type, 0.9)
 

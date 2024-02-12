@@ -1,23 +1,73 @@
+* {
+    font-family: "Varela Round";
+}
+
 body{
-    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(215, 237, 245);
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    padding: 0px 3px 0px 3px;
+    padding
+}
+
+button {
+    font-size: large;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
 
 .canvas-box {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
-    padding: auto;
+    gap: 10px;
 }
 
 .canvas-container {
     display: flex;
+    justify-content: space-around;
+    align-content: space between;
+    flex-wrap: wrap;
+    width: 240px;
+    row-gap: 20px;
 }
 
 img {
     width: 100px;
+    min-height:50px;
+    max-height: 200px;
+    border-radius: 10px;
+    border: dashed;
+    padding: 4px;
+    background-color: white;
 }
 
 canvas {
+    max-height: 200px;
+    min-height: 50px;
     width: 100px;
-    height: 100px;
+    border: dashed;
+    background-color: white;
 }

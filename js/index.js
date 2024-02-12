@@ -4,6 +4,14 @@ addEventListener("load", (event) => {
 })
 
 function handleFiles() {
+    // need to reload page to use a new picture
+    const input = document.getElementById("input")
+    const body = document.getElementById("body")
+    input.style = "display: none"
+    const reloadText = document.createElement('p')
+    reloadText.innerText = "reload page to process a new image"
+    body.insertBefore(reloadText, input)
+
     const fileList = this.files;
     var file = fileList[0]
     showFileDetails(file)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta type>
+        <script type="text/javascript" src="./js/index.js"></script>"
+        <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <h1 id="title">Split Scan</h1>
+    <p id="description">A tool for splitting a single image scan containing multiple images into separate cropped images.</p>
+
+    <input type="file" id="input" multiple />
+    <p>name: <span id="file-name">____</span> <br/> type: <span id="file-type">____</span> <br/> size: <span id="file-size">____</span></p>
+    <h2>Preview</h2>
+    <img id="image-preview"/>
+    <p> Status: <span id="preview-status"></span></p>
+    <h2>Canvas</h2>
+    <div class="canvas-container">
+        <div class="canvas-box">
+            <canvas id="canvas0"></canvas>
+            <button id="dl0">Download</button>
+        </div>
+        <div class="canvas-box">
+            <canvas id="canvas1"></canvas>
+            <button id="dl1">Download</button>
+        </div>
+        <div class="canvas-box">
+            <canvas id="canvas2"></canvas>
+            <button id="dl2">Download</button>
+        </div>
+        <div class="canvas-box">
+            <canvas id="canvas3"></canvas>
+            <button id="dl3">Download</button>
+        </div>
+    </div>
+</body>
+</html>

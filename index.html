@@ -7,15 +7,17 @@
         <link rel="stylesheet" href="./index.css">
     </head>
 <body id="body">
-    <h1 id="title">Split Scan V0.1.1</h1>
+    <h1 id="title">Split Scan V0.1.2</h1>
     <p id="description">A tool for splitting a single image scan containing multiple images into separate cropped images.</p>
 
     <input type="file" id="input" />
     <p>name: <span id="file-name">____</span> <br/> type: <span id="file-type">____</span> <br/> size: <span id="file-size">____</span></p>
-    <h2>Preview</h2>
+    <h2>Original Image</h2>
+    <p> If the original image isn't showing, reload the page and try again.</p>
     <img id="image-preview"/>
     <p> Status: <span id="preview-status"></span></p>
-    <h2>Canvas</h2>
+    <h2>Split Images</h2>
+    <p>note that they won't be squashed, that's just the preview</p>
     <div class="canvas-container">
         <div class="canvas-box">
             <canvas id="canvas0"></canvas>

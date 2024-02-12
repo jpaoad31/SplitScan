@@ -20,15 +20,19 @@ function handleFiles() {
         document.getElementById("preview-status").innerText = "cannot display: non-image data"
         return
     }
-    var imgPreview = document.getElementById("image-preview")
+    var img = document.getElementById("image-preview")
     const reader = new FileReader();
     reader.onload = (event) => {
-        imgPreview.src = event.target.result
-        setTimeout(drawToCanvas(file), 300)
+        var img = document.getElementById("image-preview")
+        img.src = event.target.result
+        setTimeout(drawToCanvas, 200, file)
     }
     reader.readAsDataURL(file)
+}
 
-    document.getElementById("preview-status").innerText = "displaying original image"
+function setImage(souce) {
+    var img = document.getElementById("image-preview")
+    img.src = EventSource
 }
 
 function showFileDetails(file) {
@@ -38,13 +42,19 @@ function showFileDetails(file) {
 }
 
 function drawToCanvas(file) {
+
+    document.getElementById("preview-status").innerText = "displaying original image"
+
     // get image and set parameters
     const img = document.getElementById("image-preview")
-    const width = Math.floor(img.width / 2)
-    const height = Math.floor(img.height / 2)
+    const width = Math.floor(img.naturalWidth / 2)
+    const height = Math.floor(img.naturalHeight / 2)
 
-    img.width = width
-    img.height = height
+    if ((width <= 1) || (height <= 1)) {
+
+        console.log("small image or image input error")
+        return
+    }
 
     // get canvas objects
     const c0 = document.getElementById("canvas0")

@@ -12,3 +12,12 @@ body{
 .canvas-container {
     display: flex;
 }
+
+img {
+    width: 100px;
+}
+
+canvas {
+    width: 100px;
+    height: 100px;
+}

@@ -10,32 +10,49 @@ body{
 }
 
 a {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: hsl(196, 80%, 35%);
     border: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: grey;
+    border-color: rgb(215, 237, 245);
     padding: 0px 3px 0px 3px;
-    padding
 }
 
 button {
-    font-size: large;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    background-color: hsl(196, 80%, 35%);
+    border: solid;
     border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(215, 237, 245);
+    padding: 0px 3px 0px 3px;
+}
+
+button:hover {
+    background-color: hsl(196, 80%, 50%);
 }
 
 h1 {
+    color: hsl(196, 80%, 25%);
     text-align: center;
 }
 
 h2 {
+    color: hsl(196, 80%, 25%);
     text-align: center;
 }
 
 p {
     text-align: center;
+}
+
+input {
+    padding: 0px 0px 10px 0px;
 }
 
 .canvas-box {
@@ -54,20 +71,12 @@ p {
     row-gap: 20px;
 }
 
-img {
+img, canvas {
     width: 100px;
     min-height:50px;
     max-height: 200px;
     border-radius: 10px;
-    border: dashed;
+    border: 2px dashed hsl(196, 80%, 35%);
     padding: 4px;
-    background-color: white;
-}
-
-canvas {
-    max-height: 200px;
-    min-height: 50px;
-    width: 100px;
-    border: dashed;
     background-color: white;
 }

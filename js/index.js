@@ -21,9 +21,13 @@ function handleFiles() {
     var img = document.getElementById("image-preview")
     const reader = new FileReader();
     reader.onload = (event) => {
+
+        // initialize image element with uploaded data
         var img = document.getElementById("image-preview")
         img.src = event.target.result
-        setTimeout(drawToCanvas, 200, file)
+        img.onload = (event) => {
+            drawToCanvas(file)
+        }
     }
     reader.readAsDataURL(file)
 }

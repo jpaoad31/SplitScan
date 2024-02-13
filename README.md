@@ -2,6 +2,8 @@
 
 [https://jpaoad31.github.io/SplitScan/](https://jpaoad31.github.io/SplitScan/)
 
+Made by John P. Adams
+
 Splits an image into 4 downloadable images. Designed for scanning multiple images on a flatbed scanner at the same time.
 
 Progress:
